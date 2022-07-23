@@ -12,7 +12,6 @@ const getPokemonsFromApi = async (): Promise<void> => {
     const pokemonData = await response2.json();
     pokemonsList.push(pokemonData);
   });
-  console.log(pokemonsList);
 };
 
 export default getPokemonsFromApi;
