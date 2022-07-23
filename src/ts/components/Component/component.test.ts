@@ -1,4 +1,4 @@
-import Component from "./component.js";
+import Component from "./Component";
 
 describe("Given a Component component", () => {
   describe("When instantiated with a section as a parent", () => {
