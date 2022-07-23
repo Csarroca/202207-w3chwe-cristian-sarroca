@@ -1,4 +1,4 @@
-export interface Component {
+export interface IComponent {
   element: HTMLElement;
   render?: () => void;
   addListeners?: () => void;
