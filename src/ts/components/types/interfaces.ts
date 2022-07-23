@@ -4,7 +4,7 @@ export interface Component {
   addListeners?: () => void;
 }
 
-export interface Pokemons {
+export interface IPokemon {
   name: string;
   number: number;
   imageUrl: string;

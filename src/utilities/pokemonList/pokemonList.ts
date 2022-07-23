@@ -4,7 +4,7 @@ const getPokemonsFromApi = async (): Promise<void> => {
   const pokemons = await fetch(url);
   const data: Promise<object> = await pokemons.json();
 
-  data.results.forEach(async (pokemon) => {
+  data.results.forEach(async (pokemon: object) => {
     const resolve = await fetch(pokemon.url);
     const pokemonData = await resolve.json();
   });
