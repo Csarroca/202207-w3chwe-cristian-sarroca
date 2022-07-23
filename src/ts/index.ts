@@ -1,3 +1,3 @@
-import getPokemonsFromApi from "./components/pokemonList/pokemonList.js";
+import getPokemonsFromApi from "../utilities/pokemonList/pokemonList.js";
 
 getPokemonsFromApi();

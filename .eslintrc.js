@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ["airbnb-base", "airbnb-typescript/base", "prettier"],
   parser: "@typescript-eslint/parser",
@@ -18,5 +19,6 @@ module.exports = {
       "always",
       { exceptAfterSingleLine: true },
     ],
+    "import/extensions": "off",
   },
 };
