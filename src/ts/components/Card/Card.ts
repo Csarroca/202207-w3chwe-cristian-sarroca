@@ -1,5 +1,5 @@
-import Component from "../Component/Component.js";
-import { Component as IComponent } from "../types/interfaces";
+import Component from "../Component/component.js";
+import { IComponent } from "../types/interfaces.js";
 
 class PokemonCard extends Component implements IComponent {
   h2: string;
