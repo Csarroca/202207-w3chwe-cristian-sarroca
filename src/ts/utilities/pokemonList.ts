@@ -1,5 +1,5 @@
-import PokemonCard from "../components/Card/Card";
-import { IPokemonData } from "../components/types/interfaces";
+import PokemonCard from "../components/Card/Card.js";
+import { IPokemonData } from "../components/types/interfaces.js";
 
 const pokemonsIventori = async (urlInventori: string[]) => {
   urlInventori.forEach(async (pokemonUrl: string) => {

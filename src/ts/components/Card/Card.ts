@@ -8,6 +8,8 @@ class PokemonCard extends Component implements IComponent {
 
   constructor(parent: HTMLElement, private pokemonAtributes: string[]) {
     super(parent, "pokemon", "li");
+
+    this.render();
   }
 
   render(): void {
