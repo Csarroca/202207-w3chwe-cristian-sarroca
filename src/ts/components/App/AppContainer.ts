@@ -2,6 +2,7 @@ import Component from "../Component/component.js";
 import { IComponent } from "../types/interfaces.js";
 import PokemonList from "../PokemonList/PokemonList.js";
 import { getPokemonDetail } from "../../services/index.js";
+import Button from "../Button/Button.js";
 
 class Container extends Component implements IComponent {
   private pokemons: any = [];
@@ -26,6 +27,12 @@ class Container extends Component implements IComponent {
     new PokemonList(
       this.element.querySelector(".card-container"),
       this.pokemons
+    );
+    new Button(this.element.querySelector(".card-container"), "button", () =>
+      console.log("menjaAnus")
+    );
+    new Button(this.element.querySelector(".card-container"), "button", () =>
+      console.log("menjaAnus")
     );
   }
 }
