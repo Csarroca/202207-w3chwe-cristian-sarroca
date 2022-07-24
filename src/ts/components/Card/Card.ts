@@ -23,7 +23,8 @@ class PokemonCard extends Component implements IComponent {
         <li> experience:${this.pokemonAtributes[1]}</li>
         <li>height:${this.pokemonAtributes[2]}</li> 
        <li> type: ${this.pokemonAtributes[4]}</li>
- <ul> `;
+
+    <ul> `;
 
     this.element.innerHTML = html;
   }
