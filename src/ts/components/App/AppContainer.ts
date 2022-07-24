@@ -7,14 +7,32 @@ import Button from "../Button/Button.js";
 class Container extends Component implements IComponent {
   private pokemons: any = [];
 
+  private offset: number = 0;
+
+  private limit: number = 22;
+
   constructor(parent: HTMLElement) {
     super(parent, "App-container", "div");
     (async () => {
-      const response = await getPokemonDetail();
+      const response = await getPokemonDetail(this.offset, this.limit);
       this.pokemons = response;
       this.render();
     })();
+  }
 
+  async getPokemonsByPage(type: string): Promise<void> {
+    if (type === "prev") {
+      this.offset -= 20;
+      this.limit -= 20;
+      const response = await getPokemonDetail(this.offset, this.limit);
+      this.pokemons = response;
+    }
+    if (type === "next") {
+      this.offset += 20;
+      this.limit += 20;
+      const response = await getPokemonDetail(this.offset, this.limit);
+      this.pokemons = response;
+    }
     this.render();
   }
 
@@ -28,11 +46,13 @@ class Container extends Component implements IComponent {
       this.element.querySelector(".card-container"),
       this.pokemons
     );
-    new Button(this.element.querySelector(".card-container"), "button", () =>
-      console.log("menjaAnus")
+    new Button(
+      this.element.querySelector(".card-container"),
+      "prev",
+      () => this.offset > 0 && this.getPokemonsByPage("prev")
     );
-    new Button(this.element.querySelector(".card-container"), "button", () =>
-      console.log("menjaAnus")
+    new Button(this.element.querySelector(".card-container"), "next", () =>
+      this.getPokemonsByPage("next")
     );
   }
 }
