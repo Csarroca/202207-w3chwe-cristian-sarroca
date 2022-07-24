@@ -4,11 +4,12 @@ export interface IComponent {
   addListeners?: () => void;
 }
 
-export interface IPokemon {
-  name: string;
-  number: number;
-  imageUrl: string;
-  types: string[];
+export interface PokemonAtributes {
+  pokemonName: string;
+  experience: number;
+  height: number;
+  img: string;
+  types: any[];
 }
 
 export interface IPokemonData {
