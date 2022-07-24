@@ -22,7 +22,7 @@ class PokemonCard extends Component implements IComponent {
     <li><img src=${this.pokemonAtributes[3]} alt=${this.pokemonAtributes[0]}></li>
         <li> experience:${this.pokemonAtributes[1]}</li>
         <li>height:${this.pokemonAtributes[2]}</li> 
-       <li> type: ${this.pokemonAtributes[4]}</li>
+        <li> type: ${this.pokemonAtributes[4]}</li>
 
     <ul> `;
 
