@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 body {
   margin: 0;
@@ -15,12 +16,24 @@ img {
 .App-container {
   width: 100%;
   height: 100%;
-  margin: 0 auto;
-  display: flex;
+  margin: 0;
+  padding: 10px, 10px;
+  background-color: rgb(124, 36, 36);
 }
 
-.pokemnon {
-  flex-direction: row;
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  background-color: rgb(137, 51, 51);
+}
 
-  width: 100%;
+.pokemon {
+  width: 30%;
+  height: 30%;
+}
+
+.title {
+  background-image: url(../img/Pokemon-Logo.jpeg);
 }

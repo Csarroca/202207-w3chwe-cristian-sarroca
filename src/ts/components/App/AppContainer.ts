@@ -11,6 +11,7 @@ class Container extends Component implements IComponent {
   render(): void {
     const html = `
     <h1 class="title">Pokedex</h1>
+    <div class= "card-list"> </div>
     `;
     this.element.innerHTML = html;
   }

@@ -33,7 +33,7 @@ const pokemonsIventori = async (urlInventori: string[]) => {
       pokemonType,
     ];
 
-    new PokemonCard(document.querySelector(".App-container"), pokemonAtributes);
+    new PokemonCard(document.querySelector(".card-list"), pokemonAtributes);
   });
 };
 

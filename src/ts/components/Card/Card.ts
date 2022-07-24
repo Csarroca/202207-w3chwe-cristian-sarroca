@@ -17,12 +17,12 @@ class PokemonCard extends Component implements IComponent {
 
   render(): void {
     const html = `
-    <h2>${this.pokemonAtributes[0]}</h2>
-    <ul>
-    <li><img src=${this.pokemonAtributes[3]} alt=${this.pokemonAtributes[0]}></li>
-        <li> experience:${this.pokemonAtributes[1]}</li>
-        <li>height:${this.pokemonAtributes[2]}</li> 
-        <li> type: ${this.pokemonAtributes[4]}</li>
+    <h2 class = "pokemon__title">${this.pokemonAtributes[0]}</h2>
+    <ul class = "pokemon__atributes">
+    <li class = "pokemon__img"><img src=${this.pokemonAtributes[3]} alt=${this.pokemonAtributes[0]}></li>
+        <li class = "pokemon__exp"> experience:${this.pokemonAtributes[1]}</li>
+        <li class = "pokemon__height">height:${this.pokemonAtributes[2]}</li> 
+        <li class = "pokemon__type"> type: ${this.pokemonAtributes[4]}</li>
 
     <ul> `;
 
