@@ -1,5 +1,8 @@
 import PokemonCard from "../components/Card/Card.js";
-import { IPokemonData } from "../components/types/interfaces.js";
+import {
+  PokemonAtributes,
+  IPokemonData,
+} from "../components/types/interfaces.js";
 
 const pokemonsIventori = async (urlInventori: string[]) => {
   urlInventori.forEach(async (pokemonUrl: string) => {
@@ -17,17 +20,20 @@ const pokemonsIventori = async (urlInventori: string[]) => {
           home: { front_default },
         },
       },
+      types,
     } = data;
-    const pokemonName = forms[0].name;
 
-    const pokemonAtributes = [
+    const pokemonName = forms[0].name;
+    const pokemonType: string[][] = types.map((type: any) => type.type.name);
+    const pokemonAtributes: PokemonAtributes[] = [
       pokemonName,
       base_experience,
       height,
       front_default,
+      pokemonType,
     ];
 
-    new PokemonCard(document.body, pokemonAtributes);
+    new PokemonCard(document.querySelector(".App-container"), pokemonAtributes);
   });
 };
 

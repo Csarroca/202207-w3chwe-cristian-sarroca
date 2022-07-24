@@ -3,7 +3,7 @@ import { IComponent } from "../types/interfaces.js";
 
 class Container extends Component implements IComponent {
   constructor(parent: HTMLElement) {
-    super(parent, "container", "section");
+    super(parent, "App-container", "div");
 
     this.render();
   }
