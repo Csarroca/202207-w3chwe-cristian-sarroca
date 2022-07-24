@@ -1,4 +1,4 @@
-import getPokemonsFromApi from "./utilities/pokemonList";
+import getPokemonsFromApi from "./utilities/pokemonList.js";
 
 const url = "https://pokeapi.co/api/v2/pokemon?offset=0&limit=10";
 
